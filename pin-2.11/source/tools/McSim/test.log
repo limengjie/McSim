@@ -1,0 +1,32 @@
+in case when the program exits with an error, please run the following command
+kill -9 794 
+  -- {58680} cmd: /home/mli55/mcsim/pin-2.11/intel64/bin/pinbin -t /home/mli55/mcsim/pin-2.11/source/tools/Pthread/mypthreadtool -port 58680 -skip_first 0 -- ./hello 
+  -- [           0]: {58680} thread 0 is created
+Hello World!
+  -- [     1629760]: {58680} thread 0 is killed :   -- num_ins : (mem_rd, mem_wr, 2nd_mem_rd, spin, lock, trylock, all)=(      20691,       9744,        0,        0,        0,        0,      81968)
+  -- {58680} total number of unsimulated (ins, rd, wr, rd_2nd): (25462, 5689, 3361, 0)
+  -- {58680} (cond_broadcast, cond_signal, cond_wait, barrier) = (0, 0, 0, 0)
+  -- event became empty at cycle = 1633390
+  -- OOO [  0] : fetched      81968 instrs, branch (miss, access)=(     1521,      14974)=  10.16%, nacks= 13422, x87_ops= 0, call_ops= 470, latest_ip= 0x7faa4d191ec0, tot_mem_wr_time= 10588280, tot_mem_rd_time= 14759020, tot_dep_dist= 1350765
+  -- L2$ [  0] : RD (miss, access)=(      13000,      14868)=  87.44%
+  -- L2$ [  0] : WR (miss, access)=(       2459,       2976)=  82.63%
+  -- L2$ [  0] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=(          0,          0,          0,         58,      13401,      13401)
+  -- L2$ [  0] : EV_from_L1 (miss, access)=(          0,       1870)= 0.00%,  L2$ (i,e,s,m,tr) ratio=( 984,   12,    0,    3,    0), num_dirty_lines (pid:#) = 0 : 459 , 
+  -- Dir [  0] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (554, 12, 0, 0, 0, 1, 426, 0, 139)
+  -- Dir [  0] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (3387, 0, 0, 0, 554, 4519, 0, 0, 0), 554, 0, 0, 0, 
+  -- Dir [  1] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (417, 7, 0, 0, 0, 1, 354, 0, 69)
+  -- Dir [  1] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (2542, 0, 0, 0, 417, 3390, 0, 0, 0), 417, 0, 0, 0, 
+  -- Dir [  2] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (575, 14, 0, 0, 0, 0, 442, 0, 147)
+  -- Dir [  2] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (3668, 0, 0, 0, 575, 4846, 0, 0, 0), 575, 0, 0, 0, 
+  -- Dir [  3] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (528, 9, 0, 0, 0, 1, 432, 0, 104)
+  -- Dir [  3] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (3804, 0, 0, 0, 528, 4878, 0, 0, 0), 528, 0, 0, 0, 
+  -- MC  [  0] : (rd, wr, act, pre) = (      554,         0,       359,       359), # of WR->RD switch = 0, #_refresh = 0, 31 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  1] : (rd, wr, act, pre) = (      417,         0,       277,       277), # of WR->RD switch = 0, #_refresh = 0, 26 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  2] : (rd, wr, act, pre) = (      575,         0,       354,       354), # of WR->RD switch = 0, #_refresh = 0, 29 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  3] : (rd, wr, act, pre) = (      528,         0,       362,       362), # of WR->RD switch = 0, #_refresh = 0, 32 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- NoC [  0] : (req, crq, rep) = (11564, 176, 17498), num_data_transfers = 1520
+  -- L1$I[  0] : RD (miss, access)=(       1063,       7271)=  14.62%
+  -- L1$D[  0] : RD (miss, access)=(      13805,      31683)=  43.57%
+  -- L1$D[  0] : WR (miss, access)=(       2909,      11818)=  24.61%
+  -- L1$D[  0] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=(          0,       1449,          0,         67,      13066,      13066), num_dirty_lines (pid:#) = 0 : 55 , 
+  -- total number of fetched instructions : 81968 (IPC =   0.501 ) programIPCs = (  ) 

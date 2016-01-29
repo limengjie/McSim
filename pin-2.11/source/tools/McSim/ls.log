@@ -1,0 +1,198 @@
+in case when the program exits with an error, please run the following command
+kill -9 848 
+  -- {35357} cmd: /home/mli55/mcsim/pin-2.11/intel64/bin/pinbin -t /home/mli55/mcsim/pin-2.11/source/tools/Pthread/mypthreadtool -port 35357 -skip_first 0 -- ls -al 
+  -- [           0]: {35357} thread 0 is created
+  -- [     1888720]:     100044 instrs so far, IPC=   0.529 programIPCs= (   0.52   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   45280   4939 ), L2 (acc, miss)=(   5077   2035 ),   2070 mem accs, (  116,  116) touched pages (this time, 1stly),  avg_dd= 16.492, 
+  -- [     3198100]:     200029 instrs so far, IPC=   0.763 programIPCs= (   0.76   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   46567   2862 ), L2 (acc, miss)=(   3114    892 ),    933 mem accs, (   97,   40) touched pages (this time, 1stly),  avg_dd= 18.986, 
+  -- [     4721920]:     300018 instrs so far, IPC=   0.656 programIPCs= (   0.65   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   42590   3409 ), L2 (acc, miss)=(   3629   1320 ),   1323 mem accs, (  122,   74) touched pages (this time, 1stly),  avg_dd= 17.373, 
+  -- [     6102300]:     400039 instrs so far, IPC=   0.724 programIPCs= (   0.72   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   49278   4667 ), L2 (acc, miss)=(   4970    874 ),    887 mem accs, (  105,   71) touched pages (this time, 1stly),  avg_dd= 16.623, 
+  -- [     7252250]:     500029 instrs so far, IPC=   0.869 programIPCs= (   0.86   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   56912   2105 ), L2 (acc, miss)=(   2178    337 ),    338 mem accs, (   52,   12) touched pages (this time, 1stly),  avg_dd= 13.812, 
+  -- [     8336880]:     600015 instrs so far, IPC=   0.921 programIPCs= (   0.92   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   57746   1201 ), L2 (acc, miss)=(   1201    182 ),    182 mem accs, (    4,    1) touched pages (this time, 1stly),  avg_dd= 13.815, 
+  -- [     9391950]:     700059 instrs so far, IPC=   0.948 programIPCs= (   0.94   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   57745   1260 ), L2 (acc, miss)=(   1265    163 ),    163 mem accs, (   11,    3) touched pages (this time, 1stly),  avg_dd= 13.818, 
+  -- [    10299350]:     800034 instrs so far, IPC=   1.101 programIPCs= (   1.10   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   67833    915 ), L2 (acc, miss)=(    925    169 ),    169 mem accs, (   20,    6) touched pages (this time, 1stly),  avg_dd=  9.920, 
+  -- [    11429790]:     900013 instrs so far, IPC=   0.884 programIPCs= (   0.88   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   52518   4282 ), L2 (acc, miss)=(   4361    422 ),    449 mem accs, (   59,   14) touched pages (this time, 1stly),  avg_dd= 12.814, 
+  -- [    12450560]:    1000014 instrs so far, IPC=   0.979 programIPCs= (   0.97   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   47228   4371 ), L2 (acc, miss)=(   4421     53 ),     53 mem accs, (    6,    0) touched pages (this time, 1stly),  avg_dd= 13.829, 
+  -- [    13452360]:    1100020 instrs so far, IPC=   0.998 programIPCs= (   0.99   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   47089   4366 ), L2 (acc, miss)=(   4415     56 ),     56 mem accs, (    8,    0) touched pages (this time, 1stly),  avg_dd= 13.799, 
+total 9928
+drwxr-xr-x  2 root root    4096 Jan 12 12:40 .
+drwxr-xr-x 23 root root    4096 Jan 12 12:42 ..
+-rwxr-xr-x  1 root root 1021112 Oct  7  2014 bash
+-rwxr-xr-x  1 root root   31152 Oct 21  2013 bunzip2
+-rwxr-xr-x  1 root root 1918032 Nov 14  2013 busybox
+-rwxr-xr-x  1 root root   31152 Oct 21  2013 bzcat
+lrwxrwxrwx  1 root root       6 Sep 28 16:00 bzcmp -> bzdiff
+-rwxr-xr-x  1 root root    2140 Oct 21  2013 bzdiff
+lrwxrwxrwx  1 root root       6 Sep 28 16:00 bzegrep -> bzgrep
+-rwxr-xr-x  1 root root    4877 Oct 21  2013 bzexe
+lrwxrwxrwx  1 root root       6 Sep 28 16:00 bzfgrep -> bzgrep
+-rwxr-xr-x  1 root root    3642 Oct 21  2013 bzgrep
+-rwxr-xr-x  1 root root   31152 Oct 21  2013 bzip2
+-rwxr-xr-x  1 root root   14480 Oct 21  2013 bzip2recover
+lrwxrwxrwx  1 root root       6 Sep 28 16:00 bzless -> bzmore
+-rwxr-xr-x  1 root root    1297 Oct 21  2013 bzmore
+-rwxr-xr-x  1 root root   47904 Dec  3 09:14 cat
+-rwxr-xr-x  1 root root   14688 May 23  2013 chacl
+-rwxr-xr-x  1 root root   60160 Dec  3 09:14 chgrp
+-rwxr-xr-x  1 root root   56032 Dec  3 09:14 chmod
+-rwxr-xr-x  1 root root   60160 Dec  3 09:14 chown
+-rwxr-xr-x  1 root root   10480 Feb 18  2013 chvt
+-rwxr-xr-x  1 root root  130304 Dec  3 09:14 cp
+-rwxr-xr-x  1 root root  137272 Jan  7  2015 cpio
+-rwxr-xr-x  1 root root  121272 Feb 19  2014 dash
+-rwxr-xr-x  1 root root   60160 Dec  3 09:14 date
+-rwxr-xr-x  1 root root   10536 Nov 25  2014 dbus-cleanup-sockets
+-rwxr-xr-x  1 root root  434032 Nov 25  2014 dbus-daemon
+-rwxr-xr-x  1 root root   10464 Nov 25  2014 dbus-uuidgen
+-rwxr-xr-x  1 root root   56136 Dec  3 09:14 dd
+-rwxr-xr-x  1 root root   97768 Dec  3 09:14 df
+-rwxr-xr-x  1 root root  110080 Dec  3 09:14 dir
+-rwxr-xr-x  1 root root   22896 Sep  2 11:35 dmesg
+lrwxrwxrwx  1 root root       8 Sep 28 16:00 dnsdomainname -> hostname
+lrwxrwxrwx  1 root root       8 Sep 28 16:00 domainname -> hostname
+-rwxr-xr-x  1 root root   82256 Feb 18  2013 dumpkeys
+-rwxr-xr-x  1 root root   31296 Dec  3 09:14 echo
+-rwxr-xr-x  1 root root   47712 Jul 16  2013 ed
+-rwxr-xr-x  1 root root  183696 Jan 18  2014 egrep
+-rwxr-xr-x  1 root root   27168 Dec  3 09:14 false
+-rwxr-xr-x  1 root root   10488 Feb 18  2013 fgconsole
+-rwxr-xr-x  1 root root  138352 Jan 18  2014 fgrep
+-rwxr-xr-x  1 root root   36144 Sep  2 11:35 findmnt
+-rwxr-xr-x  1 root root   31864 Nov 29  2012 fuser
+-rwsr-xr-x  1 root root   30800 May 15  2015 fusermount
+-rwxr-xr-x  1 root root   23688 May 23  2013 getfacl
+-rwxr-xr-x  1 root root  191952 Jan 18  2014 grep
+-rwxr-xr-x  1 root root    2303 Jan 10  2014 gunzip
+-rwxr-xr-x  1 root root    5937 Jan 10  2014 gzexe
+-rwxr-xr-x  1 root root   94048 Jan 10  2014 gzip
+-rwxr-xr-x  1 root root   14736 Dec 13  2013 hostname
+-rwxr-xr-x  1 root root  307328 Jul 23 09:19 ip
+-rwxr-xr-x  1 root root   10480 Feb 18  2013 kbd_mode
+-rwxr-xr-x  1 root root   30792 Oct 21  2013 keyctl
+-rwxr-xr-x  1 root root   23088 Feb 10  2015 kill
+-rwxr-xr-x  1 root root  154616 Apr 10  2014 kmod
+-rwxr-xr-x  1 root root  153664 Jun 10  2013 less
+-rwxr-xr-x  1 root root   10440 Jun 10  2013 lessecho
+lrwxrwxrwx  1 root root       8 Sep 28 16:00 lessfile -> lesspipe
+-rwxr-xr-x  1 root root   15912 Jun 10  2013 lesskey
+-rwxr-xr-x  1 root root    7758 Jun 10  2013 lesspipe
+-rwxr-xr-x  1 root root   56072 Dec  3 09:14 ln
+-rwxr-xr-x  1 root root  111432 Feb 18  2013 loadkeys
+-rwxr-xr-x  1 root root   49136 Jul 15  2015 login
+-rwxr-xr-x  1 root root   92328 Oct  6 22:58 loginctl
+-rwxr-xr-x  1 root root   63912 Dec 18  2013 lowntfs-3g
+-rwxr-xr-x  1 root root  110080 Dec  3 09:14 ls
+-rwxr-xr-x  1 root root   44688 Sep  2 11:35 lsblk
+lrwxrwxrwx  1 root root       4 Sep 28 16:00 lsmod -> kmod
+-rwxr-xr-x  1 root root   51936 Dec  3 09:14 mkdir
+-rwxr-xr-x  1 root root   35456 Dec  3 09:14 mknod
+-rwxr-xr-x  1 root root   39648 Dec  3 09:14 mktemp
+-rwxr-xr-x  1 root root   39600 Sep  2 11:35 more
+-rwsr-xr-x  1 root root   94792 Sep  2 11:35 mount
+-rwxr-xr-x  1 root root   10456 Jun 14  2015 mountpoint
+lrwxrwxrwx  1 root root      20 Sep 28 16:00 mt -> /etc/alternatives/mt
+-rwxr-xr-x  1 root root   68760 Jan   -- [    14455160]:    1200054 instrs so far, IPC=   0.997 programIPCs= (   0.99   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   47164   4308 ), L2 (acc, miss)=(   4359     43 ),     43 mem accs, (   10,    0) touched pages (this time, 1stly),  avg_dd= 14.155, 
+  -- [    15448440]:    1300010 instrs so far, IPC=   1.006 programIPCs= (   1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   47224   4394 ), L2 (acc, miss)=(   4446     26 ),     26 mem accs, (    5,    0) touched pages (this time, 1stly),  avg_dd= 13.930, 
+  -- [    16455240]:    1400007 instrs so far, IPC=   0.993 programIPCs= (   0.99   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00  ), L1 (acc, miss)=(   47395   4317 ), L2 (acc, miss)=(   4365     32 ),     32 mem accs, (    6,    0) touched pages (this time, 1stly),  avg_dd= 13.832, 
+ 7  2015 mt-gnu
+-rwxr-xr-x  1 root root  122088 Dec  3 09:14 mv
+-rwxr-xr-x  1 root root  192008 Oct  1  2012 nano
+lrwxrwxrwx  1 root root      20 Sep 28 16:00 nc -> /etc/alternatives/nc
+-rwxr-xr-x  1 root root   31248 Dec  3  2012 nc.openbsd
+lrwxrwxrwx  1 root root      24 Sep 28 16:00 netcat -> /etc/alternatives/netcat
+-rwxr-xr-x  1 root root  119624 Aug  5  2014 netstat
+lrwxrwxrwx  1 root root       8 Sep 28 16:00 nisdomainname -> hostname
+-rwxr-xr-x  1 root root   59848 Dec 18  2013 ntfs-3g
+-rwxr-xr-x  1 root root   10312 Dec 18  2013 ntfs-3g.probe
+-rwxr-xr-x  1 root root   67608 Dec 18  2013 ntfs-3g.secaudit
+-rwxr-xr-x  1 root root   18432 Dec 18  2013 ntfs-3g.usermap
+-rwxr-xr-x  1 root root   26728 Dec 18  2013 ntfscat
+-rwxr-xr-x  1 root root   30752 Dec 18  2013 ntfsck
+-rwxr-xr-x  1 root root   30824 Dec 18  2013 ntfscluster
+-rwxr-xr-x  1 root root   34920 Dec 18  2013 ntfscmp
+-rwxr-xr-x  1 root root   22528 Dec 18  2013 ntfsdump_logfile
+-rwxr-xr-x  1 root root   39024 Dec 18  2013 ntfsfix
+-rwxr-xr-x  1 root root   55416 Dec 18  2013 ntfsinfo
+-rwxr-xr-x  1 root root   31928 Dec 18  2013 ntfsls
+-rwxr-xr-x  1 root root   26672 Dec 18  2013 ntfsmftalloc
+-rwxr-xr-x  1 root root   30824 Dec 18  2013 ntfsmove
+-rwxr-xr-x  1 root root   34856 Dec 18  2013 ntfstruncate
+-rwxr-xr-x  1 root root   43632 Dec 18  2013 ntfswipe
+lrwxrwxrwx  1 root root       6 Sep 28 16:00 open -> openvt
+-rwxr-xr-x  1 root root   18912 Feb 18  2013 openvt
+lrwxrwxrwx  1 root root      14 Sep 28 16:00 pidof -> /sbin/killall5
+-rwsr-xr-x  1 root root   44168 May  7  2014 ping
+-rwsr-xr-x  1 root root   44680 May  7  2014 ping6
+-rwxr-xr-x  1 root root   35448 Dec  2  2014 plymouth
+-rwxr-xr-x  1 root root   31608 Dec  2  2014 plymouth-upstart-bridge
+-rwxr-xr-x  1 root root   93232 Feb 10  2015 ps
+-rwxr-xr-x  1 root root   31392 Dec  3 09:14 pwd
+lrwxrwxrwx  1 root root       4 Sep 28 16:00 rbash -> bash
+-rwxr-xr-x  1 root root   39528 Dec  3 09:14 readlink
+-rwxr-xr-x  1 root root      89 Jul 16  2013 red
+-rwxr-xr-x  1 root root   60160 Dec  3 09:14 rm
+-rwxr-xr-x  1 root root   43648 Dec  3 09:14 rmdir
+lrwxrwxrwx  1 root root       4 Sep 28 16:00 rnano -> nano
+-rwxr-xr-x  1 root root   19248 Aug 27  2013 run-parts
+-rwxr-xr-x  1 root root     254 Jul 18  2014 running-in-container
+-rwxr-xr-x  1 root root   73352 Feb 13  2014 sed
+-rwxr-xr-x  1 root root   36232 May 23  2013 setfacl
+-rwxr-xr-x  1 root root   39896 Feb 18  2013 setfont
+-rwxr-xr-x  1 root root   12052 Jan 29  2014 setupcon
+lrwxrwxrwx  1 root root       4 Sep 28 16:00 sh -> dash
+lrwxrwxrwx  1 root root       4 Sep 28 16:00 sh.distrib -> dash
+-rwxr-xr-x  1 root root   31296 Dec  3 09:14 sleep
+-rwxr-xr-x  1 root root   76624 Jul 23 09:19 ss
+lrwxrwxrwx  1 root root       7 Sep 28 16:00 static-sh -> busybox
+-rwxr-xr-x  1 root root   68256 Dec  3 09:14 stty
+-rwsr-xr-x  1 root root   36936 Jul 15  2015 su
+-rwxr-xr-x  1 root root   27200 Dec  3 09:14 sync
+-rwxr-xr-x  1 root root   18816 Sep  2 11:35 tailf
+-rwxr-xr-x  1 root root  353840 Feb  4  2014 tar
+-rwxr-xr-x  1 root root   10344 Aug 27  2013 tempfile
+-rwxr-xr-x  1 root root   60224 Dec  3 09:14 touch
+-rwxr-xr-x  1 root root   27168 Dec  3 09:14 true
+-rwxr-xr-x  1 root root  248040 Oct  6 22:58 udevadm
+-rwxr-xr-x  1 root root   14336 May 15  2015 ulockmgr_server
+-rwsr-xr-x  1 root root   69120 Sep  2 11:35 umount
+-rwxr-xr-x  1 root root   31360 Dec  3 09:14 uname
+-rwxr-xr-x  1 root root    2303 Jan 10  2014 uncompress
+-rwxr-xr-x  1 root root    2762 Feb 18  2013 unicode_start
+-rwxr-xr-x  1 root root  110080 Dec  3 09:14 vdir
+-rwxr-xr-x  1 root root    6248 Jun  9  2015 vmmouse_detect
+-rwxr-xr-x  1 root root     946 Aug 27  2013 which
+-rwxr-xr-x  1 root root   27368 Mar 23  2014 whiptail
+lrwxrwxrwx  1 root root       8 Sep 28 16:00 ypdomainname -> hostname
+-rwxr-xr-x  1 root root    1939 Jan 10  2014 zcat
+-rwxr-xr-x  1 root root    1779 Jan 10  2014 zcmp
+-rwxr-xr-x  1 root root    5766 Jan 10  2014 zdiff
+-rwxr-xr-x  1 root root     142 Jan 10  2014 zegrep
+-rwxr-xr-x  1 root root     142 Jan 10  2014 zfgrep
+-rwxr-xr-x  1 root root    2133 Jan 10  2014 zforce
+-rwxr-xr-x  1 root root    5940 Jan 10  2014 zgrep
+-rwxr-xr-x  1 root root    2039 Jan 10  2014 zless
+-rwxr-xr-x  1 root root    1912 Jan 10  2014 zmore
+-rwxr-xr-x  1 root root    5049 Jan 10  2014 znew
+  -- event became empty at cycle = 17440812
+  -- OOO [  0] : fetched    1494700 instrs, branch (miss, access)=(    41445,     312616)=  13.26%, nacks= 34893, x87_ops= 0, call_ops= 29385, latest_ip= 0x7fcf834e3300, tot_mem_wr_time= 127360400, tot_mem_rd_time= 191672670, tot_dep_dist= 21624216
+  -- L2$ [  0] : RD (miss, access)=(      34449,      76786)=  44.86%
+  -- L2$ [  0] : WR (miss, access)=(       6842,      10901)=  62.76%
+  -- L2$ [  0] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=(          0,          0,          0,        442,      34532,      34532)
+  -- L2$ [  0] : EV_from_L1 (miss, access)=(          0,      43281)= 0.00%,  L2$ (i,e,s,m,tr) ratio=( 947,   39,    0,   13,    0), num_dirty_lines (pid:#) = 0 : 1736 , 
+  -- Dir [  0] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (1531, 68, 0, 0, 0, 7, 1208, 0, 384)
+  -- Dir [  0] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (7259, 0, 0, 0, 1531, 10457, 0, 0, 0), 1531, 0, 0, 0, 
+  -- Dir [  1] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (1712, 67, 0, 0, 0, 3, 1357, 0, 419)
+  -- Dir [  1] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (9301, 0, 0, 0, 1712, 12859, 0, 0, 0), 1712, 0, 0, 0, 
+  -- Dir [  2] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (2003, 125, 0, 0, 0, 3, 1546, 0, 579)
+  -- Dir [  2] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (10091, 0, 0, 0, 2003, 14347, 0, 0, 0), 2003, 0, 0, 0, 
+  -- Dir [  3] : (i->tr, e->tr, s->tr, m->tr, m->i, tr->i, tr->e, tr->s, tr->m) = (1633, 62, 0, 0, 0, 7, 1334, 0, 354)
+  -- Dir [  3] : (nack, bypass, evict, invalidate, from_mc, dir_acc, dir_$_miss, dir_$_retry, dir_$_evict) = (7881, 0, 0, 0, 1633, 11271, 0, 0, 0), 1633, 0, 0, 0, 
+  -- MC  [  0] : (rd, wr, act, pre) = (     1531,         0,      1087,      1087), # of WR->RD switch = 0, #_refresh = 0, 81 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  1] : (rd, wr, act, pre) = (     1712,         0,      1209,      1209), # of WR->RD switch = 0, #_refresh = 0, 83 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  2] : (rd, wr, act, pre) = (     2003,         0,      1409,      1409), # of WR->RD switch = 0, #_refresh = 0, 95 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- MC  [  3] : (rd, wr, act, pre) = (     1633,         0,      1162,      1162), # of WR->RD switch = 0, #_refresh = 0, 86 pages acc, AB (rd, wr, act) = (        0,         0,         0)
+  -- NoC [  0] : (req, crq, rep) = (32875, 463, 54058), num_data_transfers = 5348
+  -- L1$I[  0] : RD (miss, access)=(      30319,     193681)=  15.65%
+  -- L1$D[  0] : RD (miss, access)=(      46467,     397312)=  11.70%
+  -- L1$D[  0] : WR (miss, access)=(       9800,     202613)=   4.84%
+  -- L1$D[  0] : (ev_coherency, ev_capacity, coherency_access, up_req, bypass, nack)=(          0,      14455,          0,       1101,      33810,      33810), num_dirty_lines (pid:#) = 0 : 56 , 
+  -- total number of fetched instructions : 1494700 (IPC =   0.857 ) programIPCs = (  ) 

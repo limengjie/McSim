@@ -1,0 +1,69 @@
+-----
+McSim
+-----
+
+McSim is a decoupled architectural simulation framework composed of a
+timing simulator and an event-driven timing simulator.  It is used as
+the name of the timing simulator as well.  A modified version of the
+user-level thread library [1] is used as the functional simulator.
+Jung Ho Ahn started to develop McSim when he was at HP Labs.  For
+further questions and suggestions, please contact Jung Ho Ahn at
+gajh@snu.ac.kr
+
+
+How to compile the simulator?
+-----------------------------
+
+1. Download the modified version of the user-level thread library at 
+   http://cal.snu.ac.kr/mcsim .  It is a Pin tool, so you should down
+   load Pin from http://www.pintool.org as well.  As of now, McSim is
+   supported till Pin 2.7.
+
+2. Overwrite source/tools/Pthread (or Pthread directory for older
+   versions of Pin) by unzipping the file you just downloaded.
+
+3. Download the tar.gz file of McSim and unzip it. It can be unzipped
+   at any directory, but here it is assumed that the file is unzipped
+   at source/tools/McSim . 
+
+4. Go to source/tools/McSim and compile McSim by typing 'make'.
+
+5. Go to source/tools/Pthread . In order to use McSim as a timing
+   simulator, you have to define EXTENGINELIB when you 'make' like:
+
+  make EXTENGINELIB='-L../McSim -lmcsim'
+
+   Then McSim will be linked to the user-level thread library pin
+   tool (called mypthreadtool) as a dynamic library.  To statically 
+   link McSim, type
+
+  make EXTENGINELIB='../McSim/libmcsim.a'
+
+
+How to use the simulator?
+-------------------------
+
+There is an example pthread application called 'stream' in McSim.  It
+is similar to the popular stream benchmark that adds two streams (or
+vectors).  To run 'stream' on top of the McSim framework,
+
+1. Go to source/tools/McSim/stream and compile stream by typing make.
+
+2. Add directories containing 'pinbin' and 'mypthreadtool' to the
+   $PATH environment variable. You can either specify their locations
+   when you run the simulator.
+
+3. Type the following command:
+
+  ../../../../ia32/bin/pinbin -t ../../Pthread/mypthreadtool -mdfile ./md.py -- ./STREAM -p4 -r2 -n32768
+
+  or type the following if you setup the PATH variable properly:
+
+  pinbin -t mypthreadtool -mdfile ./md.py -- ./STREAM -p4 -r2 -n32768
+
+You can change the configuration of the architecture you will 
+simulate by modifying the 'md.py' file.  Its format is similar to
+that of Python, but it is not a python file.  Most parameters are
+named intuitively, but please check the source files to understand
+the meaning of parameters that are not clear.
+
