@@ -148,6 +148,9 @@ pts.mc.par_bs = true
 pts.mc.full_duplex = false
 pts.mc.is_fixed_latency = false
 pts.mc.display_os_page_usage = false
+#NVM parameters
+pts.mc.NVM_addr = 500
+pts.mc.NVM_lat  = 500
 
 pts.l1dtlb.num_entries  = 64
 pts.l1dtlb.process_interval   = 10

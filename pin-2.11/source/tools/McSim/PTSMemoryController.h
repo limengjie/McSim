@@ -122,12 +122,16 @@ namespace PinPthread
       bool     last_time_from_ab;
       uint32_t num_banks_with_agile_row;
       uint32_t reciprocal_of_agile_row_portion;
+      //add NVM parameters
+      uint32_t NVM_addr;
+      uint32_t NVM_lat;
     public:
       const uint32_t rank_interleave_base_bit;
       const uint32_t bank_interleave_base_bit;
       const uint64_t page_sz_base_bit;   // byte addressing
       const uint32_t mc_interleave_base_bit;
       const uint32_t num_mcs;
+
     private:
       mc_scheduling_policy policy;
       bool           mini_rank;
@@ -190,6 +194,11 @@ namespace PinPthread
 
 
 }
+
+
+////add NVM parameters
+//static uint64_t NVM_addr = 500;
+//static uint64_t NVM_lat = 500;
 
 #endif
 

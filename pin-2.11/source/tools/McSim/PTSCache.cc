@@ -178,6 +178,13 @@ void CacheL1::add_req_event(
   {
     event_time += process_interval - event_time%process_interval;
   }*/
+
+ ////print out event type
+ //if (local_event-> type == et_write) {
+  //cout << "from cache:\n"; 
+  //cout <<" event type = " << local_event-> type << endl;
+ //}
+
   geq->add_event(event_time, this);
   req_event.insert(pair<uint64_t, LocalQueueElement *>(event_time, local_event));
 }

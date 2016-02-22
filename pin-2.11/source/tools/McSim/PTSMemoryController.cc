@@ -83,6 +83,10 @@ MemoryController::MemoryController(
   tWTR         (get_param_uint64("tWTR", 8)),
   req_window_sz(get_param_uint64("req_window_sz", 16)),
   mc_to_dir_t_ab(get_param_uint64("mc_to_dir_t_ab", mc_to_dir_t)),
+  //read and set NVM members
+  NVM_addr (get_param_uint64("NVM_addr", 200)),
+  NVM_lat (get_param_uint64("NVM_lat", 200)),
+  ///////////////
   tRCD_ab         (get_param_uint64("tRCD_ab", tRCD)),
   tRAS_ab         (get_param_uint64("tRAS_ab", tRAS)),
   tRP_ab          (get_param_uint64("tRP_ab",  tRP)),
@@ -105,6 +109,9 @@ MemoryController::MemoryController(
   rd_dp_status(),
   wr_dp_status()
 {
+  //cout << "NVM parameters:\n" << "addr = " << NVM_addr << endl;
+  //cout << "latency = " << NVM_lat << endl;
+
   process_interval = get_param_uint64("process_interval", 10);
   refresh_interval = get_param_uint64("refresh_interval", 80000);
   next_refresh_time = refresh_interval;
@@ -194,24 +201,38 @@ void MemoryController::add_req_event(
     LocalQueueElement * local_event,
     Component * from)
 {
+  //print out the event type
+  if ((local_event-> type) != et_e_rd) 
+    cout << "--------------------------- event type = " << local_event -> type << endl;
+
+
   if (event_time % process_interval != 0)
-  {
+  { // make the new event_time % process_interv == 0
     event_time += process_interval - event_time%process_interval;
   }
 
   if (is_fixed_latency == true)
   {
+    //cout << "is_fixed_lat\n";
     if (local_event->type == et_evict || local_event->type == et_dir_evict)
     {
       delete local_event;
     }
     else
     {
+      //add additional latency for NVM
+      //if (local_event->address > NVM_addr)
+        //event_time += NVM_lat;
+        //cout << "mc to dir time = " << mc_to_dir_t << endl;
+        //cout << "event time = " << event_time << endl;
+      //cout << "===============  NVM_addr = " << NVM_addr;
+      //cout << "========== NVM_lat = " << NVM_lat << endl;
       directory->add_rep_event(event_time + mc_to_dir_t, local_event);
     }
   }
   else
   {
+
     geq->add_event(event_time, this);
     req_event.insert(pair<uint64_t, LocalQueueElement *>(event_time, local_event));
     check_bank_status(local_event);
@@ -331,9 +352,14 @@ void MemoryController::show_state(uint64_t curr_time)
 
 uint32_t MemoryController::process_event(uint64_t curr_time)
 {
+
   bool command_sent = pre_processing(curr_time);
   uint32_t i, i2;
   vector<LocalQueueElement *>::iterator iter, iter2;
+
+  //// print out event type
+  //if ((*iter)-> type != et_e_rd) 
+    //cout << "---------------------------  event type = " << (*iter)-> type<< endl;
 
   /*if (curr_time % refresh_interval == 0)
     {
@@ -392,6 +418,8 @@ uint32_t MemoryController::process_event(uint64_t curr_time)
 
     // check constraints
     uint64_t address  = (*iter)->address;
+
+
     if (num_banks_per_rank_ab > 0)
     {
       if ((h == 0 && (address >> 63 != 0) && last_time_from_ab == true) ||
@@ -699,6 +727,13 @@ uint32_t MemoryController::process_event(uint64_t curr_time)
               last_read_time.first  = rank_num;
               last_read_time.second = curr_time;// + (tCL_curr + tBL)*process_interval;
 
+              //add additional latency for NVM
+              //if ((*iter)->address > NVM_addr)
+                //curr_time += NVM_lat;
+        //cout << "mc to dir time = " << mc_to_dir_t_curr << endl;
+        //cout << "event time = " << curr_time << endl;
+      //cout << "===============  NVM_addr = " << NVM_addr;
+      //cout << "========== NVM_lat = " << NVM_lat << endl;
               directory->add_rep_event(curr_time + mc_to_dir_t_curr, *iter);
               if (par_bs == true) num_req_from_a_th[(*iter)->th_id]--;
               if (policy == mc_scheduling_open)
@@ -783,6 +818,13 @@ uint32_t MemoryController::process_event(uint64_t curr_time)
               if (type == et_s_rd_wr)
               {
                 (*iter)->type = et_s_rd;
+                //add additional latency for NVM
+                //if ((*iter)->address > NVM_addr)
+                  //curr_time += NVM_lat;
+        //cout << "mc to dir time = " << mc_to_dir_t_curr << endl;
+        //cout << "event time = " << curr_time << endl;
+      //cout << "===============  NVM_addr = " << NVM_addr;
+      //cout << "========== NVM_lat = " << NVM_lat << endl;
                 directory->add_rep_event(curr_time + mc_to_dir_t_curr, *iter);
               }
               else

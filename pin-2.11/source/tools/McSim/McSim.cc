@@ -227,6 +227,7 @@ McSim::McSim(PthreadTimingSimulator * pts_)
 
   if (is_asymmetric == false)
   {
+   //cout << "is_asymmetric == false\n";
     for (uint32_t i = 0; i < num_hthreads; i++)
     {
       if (use_o3core == true)
@@ -351,8 +352,9 @@ McSim::McSim(PthreadTimingSimulator * pts_)
         dirs[i]->crossbar = noc;
       }
     }
-    else
+    else // noc_type == "xbar"
     {
+     //cout << "xbar\n";
       noc = new Crossbar(ct_crossbar, 0, this, num_hthreads / num_threads_per_l1_cache / num_l1_caches_per_l2_cache);
 
       // instantiate directories
@@ -363,6 +365,7 @@ McSim::McSim(PthreadTimingSimulator * pts_)
         dirs.push_back(new Directory(ct_directory, i, this));
         if (use_rbol == true)
         {
+	 //cout << "use_rbol == true\n";
           rbols.push_back(new RBoL(ct_rbol, i, this));
           rbols[i]->directory        = dirs[i];
           rbols[i]->mc = mcs[i];
@@ -372,6 +375,7 @@ McSim::McSim(PthreadTimingSimulator * pts_)
         }
         else
         {
+	 //cout << "use_rbol == false\n";
           dirs[i]->memorycontroller = (mcs[i]);
           mcs[i]->directory = (dirs[i]);
         }
@@ -385,22 +389,14 @@ McSim::McSim(PthreadTimingSimulator * pts_)
       }
     }
   }
-  else
+  else // is_asymmetric == true
   {
+   //cout << "is_asymmetric == true\n";
+
     Component ** noc_nodes;
 
     uint32_t num_noc_nodes = pts->get_param_uint64("noc.num_node", 1);
-    noc_nodes              = new Component * [num_noc_nodes];
-    uint32_t num_l2_caches = 0;
-    uint32_t num_l1_caches = 0;
-    uint32_t num_dirs      = 0;
-    uint32_t num_cores     = 0;
-
-    noc = new Crossbar(ct_crossbar, 0, this, num_noc_nodes);
-
-    for (uint32_t i = 0; i < num_noc_nodes; i++)
-    {
-      stringstream num_to_str;
+    noc_nodes              = new Component * [num_noc_nodes]; uint32_t num_l2_caches = 0; uint32_t num_l1_caches = 0; uint32_t num_dirs      = 0; uint32_t num_cores     = 0; noc = new Crossbar(ct_crossbar, 0, this, num_noc_nodes); for (uint32_t i = 0; i < num_noc_nodes; i++) { stringstream num_to_str;
       num_to_str << i;
       string node_type = pts->get_param_str(string("noc.node.")+num_to_str.str());
 
